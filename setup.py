@@ -52,5 +52,7 @@ setup(name='cssconflict',
       tests_require=tests_require,
       test_suite="cssconflict.tests",
       entry_points="""
+      [console_scripts]
+      cssconflict=cssconflict:main
 """)
 
