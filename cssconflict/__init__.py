@@ -55,7 +55,7 @@ def detect_conflict(d):
     for selector, sd in sorted(d.items()):
         conflicted = []
         for name, values in sorted(sd.items()):
-            if len(set(values)) > 1:
+            if len(set(value for filename, value in values)) > 1:
                 conflicted.append((name, values))
         if conflicted:
             print("{selector} {{".format(selector=selector))
